@@ -3,7 +3,7 @@
 Design by Creative-Tim.com. Coded by AppSeed.us - [LIVE Demo](https://react-express-material-kit.appseed.us/) 
 
 
-![Material Kit - Coded in React and Express](https://github.com/app-generator/react-material-kit/blob/master/screenshots//react-express-material-kit-creative-tim-top-image.png)
+![Material Kit - Coded in React and Express](https://github.com/app-generator/react-material-kit/blob/master/screenshots/react-material-kit.png)
 
 ## Requirements
 - [Node.js](https://nodejs.org/) >= 6.x
