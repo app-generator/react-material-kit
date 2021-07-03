@@ -2,9 +2,6 @@
 ====
 Design by Creative-Tim.com. Coded by AppSeed.us - [LIVE Demo](https://react-express-material-kit.appseed.us/) 
 
-
-![Material Kit - Coded in React and Express](https://github.com/app-generator/static/blob/master/products/react-express-material-design-intro.gif?raw=true)
-
 ## Requirements
 - [Node.js](https://nodejs.org/) >= 6.x
 
