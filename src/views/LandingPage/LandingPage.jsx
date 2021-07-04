@@ -47,19 +47,19 @@ class LandingPage extends React.Component {
               <GridItem xs={12} sm={12} md={6}>
                 <h1 className={classes.title}>Full Stack Web App.</h1>
                 <h4>
-                Designed by Creative-Tim, coded by AppSeed.us.
+                &copy; Creative-Tim - coded by AppSeed.
                 <br/>
-                This web app can be generated in React combined with Express / Flask or Laravel. Your choice :)
+                  Open-source React Project.
                 </h4>
                 <br />
                 <Button
                   color="danger"
                   size="lg"
-                  href="https://appseed.us/fullstack-apps-generator"
+                  href="https://appseed.us/app-generator"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fas fa-rocket" /> Full Stack App Generator
+                  <i className="fas fa-rocket" /> App Generator
                 </Button>
               </GridItem>
             </GridContainer>
