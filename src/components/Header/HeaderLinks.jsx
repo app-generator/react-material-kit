@@ -43,8 +43,6 @@ const Logout = connect(dispatch => ({ dispatch }))(props => (
     </ListItem>
 ))
 
-
-
 function HeaderLinks({ ...props }) {
   const { classes } = props;
   return (
@@ -79,7 +77,7 @@ function HeaderLinks({ ...props }) {
                 color="transparent"
                 target="_blank"
                 style={{color: 'white'}}
-                className={classes.navLink}>{props.state.user ? `${props.state.user.name} ${props.state.user.surname}` : `Login`}</Button>
+                className={classes.navLink}>{props.state.user ? `${props.state.user.email}` : `Login`}</Button>
             </Link>
         </ListItem>
         {
