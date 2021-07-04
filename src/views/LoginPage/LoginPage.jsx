@@ -62,10 +62,8 @@ class LoginPage extends React.Component {
   submitForm(e){
     e.preventDefault();
 
-    const user = {
-        email: this.state.email.value,
-        password: this.state.password.value
-    }
+    let email = this.state.email.value;
+    let password = this.state.password.value;
 
     const url = 'http://localhost:3000/api/users/login';
 
@@ -77,7 +75,7 @@ class LoginPage extends React.Component {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ user }), // body data type must match "Content-Type" header
+        body: '{"email":"`' + email + '", "password":"' + password + '"}',
     })
     .then( res => res.json())
     .then( data => {
@@ -88,8 +86,12 @@ class LoginPage extends React.Component {
         if (errors) {
             for (let name in errors) {
                 const errorMessage = errors[name];
+                console.log('err: ' + name + ' -> ' + errorMessage );
 
-                this.setState(state => ({ [name]: { ...state[name], errors: [ ...state[name].errors, errorMessage ] } }));
+                const login_status = document.querySelector('#login-status');
+                login_status.textContent = errorMessage;
+                
+                //this.setState(state => ({ [name]: { ...state[name], errors: [ ...state[name].errors, errorMessage ] } }));
             }
 
             return;
@@ -132,36 +134,11 @@ class LoginPage extends React.Component {
                     <CardHeader color="primary" className={classes.cardHeader}>
                       <h4>Login</h4>
                       <div className={classes.socialLine}>
-                        <Button
-                          justIcon
-                          href="#pablo"
-                          target="_blank"
-                          color="transparent"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className={"fab fa-twitter"} />
-                        </Button>
-                        <Button
-                          justIcon
-                          href="#pablo"
-                          target="_blank"
-                          color="transparent"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className={"fab fa-facebook"} />
-                        </Button>
-                        <Button
-                          justIcon
-                          href="#pablo"
-                          target="_blank"
-                          color="transparent"
-                          onClick={e => e.preventDefault()}
-                        >
-                          <i className={"fab fa-google-plus-g"} />
-                        </Button>
                       </div>
                     </CardHeader>
-                    <p className={classes.divider}>Or Be Classical</p>
+                    <p id="login-status" className={classes.divider}>
+                      Add your credentials                      
+                    </p>
                     <CardBody>
                       <CustomInput
                         labelText="Email..."
