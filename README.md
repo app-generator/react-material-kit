@@ -3,9 +3,10 @@
 Design by Creative-Tim.com. Coded by AppSeed.us - [LIVE Demo](https://react-express-material-kit.appseed.us/) 
 
 ## Requirements
-- [Node.js](https://nodejs.org/) >= 6.x
+- [Node.js](https://nodejs.org/) >= 12.x
 
 ## Setting up for development
+
 * clone the project: `git clone https://github.com/app-generator/react-material-kit.git`
 * change directory to `react-material-kit`
 * (Optionally) start the [Express](https://github.com/app-generator/express-starter/blob/master/README.md) backend server (default ip/port: `locahost:3000`)
