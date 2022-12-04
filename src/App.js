@@ -28,6 +28,7 @@ import Presentation from "layouts/pages/presentation";
 
 // Material Kit 2 React routes
 import routes from "routes";
+import { ProtectedRoute } from "./ProtectedRoute";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -45,6 +46,13 @@ export default function App() {
       }
 
       if (route.route) {
+        if (route.protected) {
+          return (
+            <Route key={route.key} element={<ProtectedRoute />}>
+              <Route path={route.route} element={route.component} />
+            </Route>
+          );
+        }
         return <Route exact path={route.route} element={route.component} key={route.key} />;
       }
 
