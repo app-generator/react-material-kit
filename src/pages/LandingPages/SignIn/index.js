@@ -183,6 +183,7 @@ function SignInBasic() {
                         name="email"
                         onChange={handleChange}
                         label="Email"
+                        value={formData?.email}
                         fullWidth
                       />
                     </MKBox>
@@ -192,6 +193,7 @@ function SignInBasic() {
                         name="password"
                         onChange={handleChange}
                         label="Password"
+                        value={formData?.password}
                         fullWidth
                       />
                     </MKBox>
