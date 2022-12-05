@@ -47,6 +47,8 @@ import AboutUs from "layouts/pages/landing-pages/about-us";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Author from "layouts/pages/landing-pages/author";
 import SignIn from "layouts/pages/authentication/sign-in";
+import SignOutPage from "layouts/pages/authentication/sign-out";
+import PresentationPage from "layouts/pages/presentation";
 
 // Sections
 import PageHeaders from "layouts/sections/page-sections/page-headers";
@@ -82,16 +84,25 @@ const routes = [
             name: "about us",
             route: "/pages/landing-pages/about-us",
             component: <AboutUs />,
+            protected: true,
           },
           {
             name: "contact us",
             route: "/pages/landing-pages/contact-us",
             component: <ContactUs />,
+            protected: true,
           },
           {
             name: "author",
             route: "/pages/landing-pages/author",
             component: <Author />,
+            protected: true,
+          },
+          {
+            name: "presentation",
+            route: "/presentation",
+            component: <PresentationPage />,
+            protected: true,
           },
         ],
       },
@@ -102,6 +113,11 @@ const routes = [
             name: "sign in",
             route: "/pages/authentication/sign-in",
             component: <SignIn />,
+          },
+          {
+            name: "sign out",
+            route: "/pages/authentication/sign-out",
+            component: <SignOutPage />,
           },
         ],
       },
@@ -120,11 +136,13 @@ const routes = [
             name: "page headers",
             route: "/sections/page-sections/page-headers",
             component: <PageHeaders />,
+            protected: true,
           },
           {
             name: "features",
             route: "/sections/page-sections/features",
             component: <Features />,
+            protected: true,
           },
         ],
       },
@@ -137,16 +155,19 @@ const routes = [
             name: "navbars",
             route: "/sections/navigation/navbars",
             component: <Navbars />,
+            protected: true,
           },
           {
             name: "nav tabs",
             route: "/sections/navigation/nav-tabs",
             component: <NavTabs />,
+            protected: true,
           },
           {
             name: "pagination",
             route: "/sections/navigation/pagination",
             component: <Pagination />,
+            protected: true,
           },
         ],
       },
@@ -159,11 +180,13 @@ const routes = [
             name: "inputs",
             route: "/sections/input-areas/inputs",
             component: <Inputs />,
+            protected: true,
           },
           {
             name: "forms",
             route: "/sections/input-areas/forms",
             component: <Forms />,
+            protected: true,
           },
         ],
       },
@@ -176,16 +199,19 @@ const routes = [
             name: "alerts",
             route: "/sections/attention-catchers/alerts",
             component: <Alerts />,
+            protected: true,
           },
           {
             name: "modals",
             route: "/sections/attention-catchers/modals",
             component: <Modals />,
+            protected: true,
           },
           {
             name: "tooltips & popovers",
             route: "/sections/attention-catchers/tooltips-popovers",
             component: <TooltipsPopovers />,
+            protected: true,
           },
         ],
       },
@@ -198,41 +224,49 @@ const routes = [
             name: "avatars",
             route: "/sections/elements/avatars",
             component: <Avatars />,
+            protected: true,
           },
           {
             name: "badges",
             route: "/sections/elements/badges",
             component: <Badges />,
+            protected: true,
           },
           {
             name: "breadcrumbs",
             route: "/sections/elements/breadcrumbs",
             component: <BreadcrumbsEl />,
+            protected: true,
           },
           {
             name: "buttons",
             route: "/sections/elements/buttons",
             component: <Buttons />,
+            protected: true,
           },
           {
             name: "dropdowns",
             route: "/sections/elements/dropdowns",
             component: <Dropdowns />,
+            protected: true,
           },
           {
             name: "progress bars",
             route: "/sections/elements/progress-bars",
             component: <ProgressBars />,
+            protected: true,
           },
           {
             name: "toggles",
             route: "/sections/elements/toggles",
             component: <Toggles />,
+            protected: true,
           },
           {
             name: "typography",
             route: "/sections/elements/typography",
             component: <Typography />,
+            protected: true,
           },
         ],
       },

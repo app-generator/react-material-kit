@@ -26,6 +26,11 @@ export default {
     margin: 0,
     padding: 0,
   },
+  iframe: {
+    // position: "fixed !important",
+    // height: "auto !important",
+    zIndex: "-999 !important",
+  },
   "a, a:link, a:visited": {
     textDecoration: "none !important",
   },
