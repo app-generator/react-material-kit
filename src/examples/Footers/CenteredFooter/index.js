@@ -105,14 +105,14 @@ function CenteredFooter({ company, links, socials, light }) {
 
 // Setting default values for the props of CenteredFooter
 CenteredFooter.defaultProps = {
-  company: { href: "https://www.creative-tim.com/", name: "Creative Tim" },
+  company: { href: "https://www.creative-tim.com/?AFFILIATE=128200", name: "Creative Tim" },
   links: [
-    { href: "https://www.creative-tim.com/", name: "Company" },
-    { href: "https://www.creative-tim.com/presentation", name: "About Us" },
-    { href: "https://www.creative-tim.com/presentation", name: "Team" },
-    { href: "https://www.creative-tim.com/templates/react", name: "Products" },
-    { href: "https://www.creative-tim.com/blog", name: "Blog" },
-    { href: "https://www.creative-tim.com/license", name: "License" },
+    { href: "https://www.creative-tim.com/?AFFILIATE=128200", name: "Company" },
+    { href: "https://www.creative-tim.com/presentation?AFFILIATE=128200", name: "About Us" },
+    { href: "https://www.creative-tim.com/presentation?AFFILIATE=128200", name: "Team" },
+    { href: "https://www.creative-tim.com/templates/react?AFFILIATE=128200", name: "Products" },
+    { href: "https://www.creative-tim.com/blog?AFFILIATE=128200", name: "Blog" },
+    { href: "https://www.creative-tim.com/license?AFFILIATE=128200", name: "License" },
   ],
   socials: [
     { icon: <FacebookIcon fontSize="small" />, link: "https://www.facebook.com/CreativeTim/" },

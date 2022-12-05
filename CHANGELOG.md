@@ -1,5 +1,11 @@
 # Change Log
 
+## [1.0.1] 2022-12-05
+### Changes
+
+- Links Update (minor)
+- Codebase cleanUP
+
 ## [1.0.0] 2022-12-05
 ### STABLE_Version
 
