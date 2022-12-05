@@ -48,6 +48,7 @@ import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Author from "layouts/pages/landing-pages/author";
 import SignIn from "layouts/pages/authentication/sign-in";
 import SignOutPage from "layouts/pages/authentication/sign-out";
+import PresentationPage from "layouts/pages/presentation";
 
 // Sections
 import PageHeaders from "layouts/sections/page-sections/page-headers";
@@ -95,6 +96,12 @@ const routes = [
             name: "author",
             route: "/pages/landing-pages/author",
             component: <Author />,
+            protected: true,
+          },
+          {
+            name: "presentation",
+            route: "/presentation",
+            component: <PresentationPage />,
             protected: true,
           },
         ],

@@ -33,19 +33,34 @@ import footerRoutes from "footer.routes";
 // Image
 import bgImage from "assets/images/illustrations/illustration-reset.jpg";
 
+import { useAuth } from "auth-context/auth.context";
+
 function ContactUs() {
+  const { user } = useAuth();
   return (
     <>
       <MKBox position="fixed" top="0.5rem" width="100%">
-        <DefaultNavbar
-          routes={routes}
-          action={{
-            type: "external",
-            route: "https://www.creative-tim.com/product/material-kit-react",
-            label: "free download",
-            color: "info",
-          }}
-        />
+        {user && user.token ? (
+          <DefaultNavbar
+            routes={routes}
+            action={{
+              type: "internal",
+              route: "/pages/authentication/sign-out",
+              label: "logout",
+              color: "info",
+            }}
+          />
+        ) : (
+          <DefaultNavbar
+            routes={routes}
+            action={{
+              type: "external",
+              route: "https://www.creative-tim.com/product/material-kit-react",
+              label: "free download",
+              color: "info",
+            }}
+          />
+        )}
       </MKBox>
       <Grid container spacing={3} alignItems="center">
         <Grid item xs={12} lg={6}>

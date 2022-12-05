@@ -46,19 +46,35 @@ import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/bg-presentation.jpg";
 
+import { useAuth } from "auth-context/auth.context";
+
 function Presentation() {
+  const { user } = useAuth();
   return (
     <>
-      <DefaultNavbar
-        routes={routes}
-        action={{
-          type: "external",
-          route: "https://www.creative-tim.com/product/material-kit-react",
-          label: "free download",
-          color: "info",
-        }}
-        sticky
-      />
+      {user && user.token ? (
+        <DefaultNavbar
+          routes={routes}
+          action={{
+            type: "internal",
+            route: "/pages/authentication/sign-out",
+            label: "logout",
+            color: "info",
+          }}
+          sticky
+        />
+      ) : (
+        <DefaultNavbar
+          routes={routes}
+          action={{
+            type: "external",
+            route: "https://www.creative-tim.com/product/material-kit-react",
+            label: "free download",
+            color: "info",
+          }}
+          sticky
+        />
+      )}
       <MKBox
         minHeight="75vh"
         width="100%"
