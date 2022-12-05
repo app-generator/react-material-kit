@@ -48,18 +48,12 @@ import bgImage from "assets/images/bg-sign-in-basic.jpeg";
 import AuthApi from "../../../api/auth";
 import { useAuth } from "../../../auth-context/auth.context";
 
-function SignInBasic() {
-  const [rememberMe, setRememberMe] = useState(false);
+function SignUpBasic() {
   const [error, setError] = useState("");
-  const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-  });
+  const [formData, setFormData] = useState({});
 
   const navigate = useNavigate();
-  const { user, setUser } = useAuth();
-
-  const handleSetRememberMe = () => setRememberMe(!rememberMe);
+  const { user } = useAuth();
 
   const handleChange = (e) => {
     setFormData({
@@ -68,21 +62,12 @@ function SignInBasic() {
     });
   };
 
-  const setProfile = (response) => {
-    let user = { ...response.data.user };
-    user.token = response.data.token;
-    user = JSON.stringify(user);
-    setUser(user);
-    localStorage.setItem("user", user);
-    return navigate("/dashboard");
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    AuthApi.Login(formData)
+    AuthApi.Register(formData)
       .then((response) => {
         if (response.data.success) {
-          return setProfile(response);
+          return navigate("/pages/authentication/sign-in");
         }
         return setError(response.data.msg);
       })
@@ -169,7 +154,7 @@ function SignInBasic() {
                   textAlign="center"
                 >
                   <MKTypography variant="h4" fontWeight="medium" color="white" mt={1}>
-                    Sign in
+                    Sign Up
                   </MKTypography>
                   <Grid container spacing={3} justifyContent="center" sx={{ mt: 1, mb: 2 }}>
                     <Grid item xs={2}>
@@ -193,11 +178,19 @@ function SignInBasic() {
                   <MKBox component="form" role="form">
                     <MKBox mb={2}>
                       <MKInput
+                        type="text"
+                        name="username"
+                        onChange={handleChange}
+                        label="Name"
+                        fullWidth
+                      />
+                    </MKBox>
+                    <MKBox mb={2}>
+                      <MKInput
                         type="email"
                         name="email"
                         onChange={handleChange}
                         label="Email"
-                        value={formData?.email}
                         fullWidth
                       />
                     </MKBox>
@@ -207,21 +200,8 @@ function SignInBasic() {
                         name="password"
                         onChange={handleChange}
                         label="Password"
-                        value={formData?.password}
                         fullWidth
                       />
-                    </MKBox>
-                    <MKBox display="flex" alignItems="center" ml={-1}>
-                      <Switch checked={rememberMe} onChange={handleSetRememberMe} />
-                      <MKTypography
-                        variant="button"
-                        fontWeight="regular"
-                        color="text"
-                        onClick={handleSetRememberMe}
-                        sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
-                      >
-                        &nbsp;&nbsp;Remember me
-                      </MKTypography>
                     </MKBox>
                     <MKBox textAlign="center" ml={-1}>
                       <MKTypography
@@ -235,21 +215,21 @@ function SignInBasic() {
                     </MKBox>
                     <MKBox mt={4} mb={1}>
                       <MKButton variant="gradient" onClick={handleSubmit} color="info" fullWidth>
-                        sign in
+                        sign up
                       </MKButton>
                     </MKBox>
                     <MKBox mt={3} mb={1} textAlign="center">
                       <MKTypography variant="button" color="text">
-                        Don&apos;t have an account?{" "}
+                        Already have an account?{" "}
                         <MKTypography
                           component={Link}
-                          to="/pages/authentication/sign-up"
+                          to="/pages/authentication/sign-in"
                           variant="button"
                           color="info"
                           fontWeight="medium"
                           textGradient
                         >
-                          Sign up
+                          Login
                         </MKTypography>
                       </MKTypography>
                     </MKBox>
@@ -267,4 +247,4 @@ function SignInBasic() {
   );
 }
 
-export default SignInBasic;
+export default SignUpBasic;

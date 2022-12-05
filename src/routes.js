@@ -47,6 +47,7 @@ import AboutUs from "layouts/pages/landing-pages/about-us";
 import ContactUs from "layouts/pages/landing-pages/contact-us";
 import Author from "layouts/pages/landing-pages/author";
 import SignIn from "layouts/pages/authentication/sign-in";
+import SignUp from "layouts/pages/authentication/sign-up";
 import SignOutPage from "layouts/pages/authentication/sign-out";
 import PresentationPage from "layouts/pages/presentation";
 
@@ -113,6 +114,11 @@ const routes = [
             name: "sign in",
             route: "/pages/authentication/sign-in",
             component: <SignIn />,
+          },
+          {
+            name: "sign up",
+            route: "/pages/authentication/sign-up",
+            component: <SignUp />,
           },
           {
             name: "sign out",
