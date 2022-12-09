@@ -152,5 +152,21 @@ The API server will start using the `PORT` specified in `.env` file (default 500
 
 <br /> 
 
+## [React Material Kit PRO](https://appseed.us/product/material-kit-pro/full-stack/)
+
+> For more components, pages and priority on support, feel free to take a look at this amazing starter:
+
+`Material Kit React PRO` is built with over 100 frontend individual elements, like buttons, inputs, navbars, alerts or cards, giving you the freedom of choosing and combining. The product comes with a simple JWT authentication flow: login/register/logout. 
+
+- 👉 [React Material Kit PRO](https://appseed.us/product/material-kit-pro/full-stack/) - Product Page
+  - ✅ `Enhanced UI` - more pages and components
+  - ✅ `Priority` on support
+
+<br >
+
+![React Material Kit PRO - Premium Fullstack starter crafted by Creative-Tim and AppSeed.](https://user-images.githubusercontent.com/51070104/205701266-e721435d-22fc-48f2-9462-11f7fb050143.png)
+
+<br />
+
 ---
 [React Material Kit](https://appseed.us/product/material-kit/api-server-nodejs/react/) - Provided by **[AppSeed](https://appseed.us/app-generator)**.
